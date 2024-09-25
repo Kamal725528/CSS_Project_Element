@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-layout3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            border: 5px solid red;
+            display: grid;
+            grid-template-rows: repeat(3,1fr);
+            grid-template-columns: repeat(3,1fr);
+        }
+        .box1{
+            background-color: brown;
+            grid-column: 1/4;
+        }
+        .box2{
+            background-color: wheat;
+        }
+        .box3{
+            background-color: yellowgreen;
+            grid-column: 2/4;
+            grid-row:2/3;
+               
+        }
+        .box4{
+            background-color: purple;
+            grid-column: 1/4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+    </div>
+</body>
+</html>

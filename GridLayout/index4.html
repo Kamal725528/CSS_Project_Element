@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-layout-4</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            border: 5px solid black;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+            grid-template-areas: "header header header"
+                                  "content1 content2 content2"
+                                  "footer footer footer";
+        }
+        .box1{
+            background-color: wheat;
+            grid-area: header;
+        }
+        .box2{
+            background-color: rebeccapurple;
+            grid-area: content1;
+        }
+        .box3{
+            background-color: green;
+            grid-area: content2;
+        }
+        .box4{
+            background-color: gold;
+            grid-area:footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">header</div>
+        <div class="box2">content1</div>
+        <div class="box3">content2</div>
+        <div class="box4">footer</div>
+    </div>
+</body>
+</html>
